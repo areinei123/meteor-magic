@@ -5,7 +5,7 @@ Template.body.helpers({
 });
 
 Template.body.events({
-  "click .new-set": function (event) {
+  "click #new-set": function (event) {
     event.preventDefault();
     
   }
