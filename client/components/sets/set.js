@@ -13,6 +13,12 @@ Template.setForm.events({
   }
 });
 
+Template.set.events({
+  "click .setShow": function() {
+    return Session.set('setShow', this._id);
+  }
+});
+
 Template.set.helpers({
   sets: function () {
     return Sets.find({});
