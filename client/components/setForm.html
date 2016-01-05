@@ -1,3 +1,25 @@
 <template name="setForm">
-  
+<div class="container">
+  <div class="set-form">
+    <form class="form-horizontal new-set">
+      <div class="form-group">
+        <label for="setName" class="col-sm-1 control-label">Name</label>
+        <div class="col-sm-5">
+          <input type="text" name="setName" class="form-control" id="setName" placeholder="Set name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="setSize" class="col-sm-1 control-label">Size</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="setSize" placeholder="Set Size (integer)">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 </template>
