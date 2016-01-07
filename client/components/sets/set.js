@@ -15,7 +15,12 @@ Template.setForm.events({
 
 Template.set.events({
   "click .setShow": function() {
-    return Session.set('setShow', this._id);
+    // setId = this._id;
+    // set = Sets.find({setId}).fetch();
+    // setSpecifics = set.map(function(set) {return set.setname;});
+    // console.log(set);
+    // console.log(setSpecifics);
+    return Session.set('setShow');
   }
 });
 
