@@ -2,8 +2,8 @@ Template.body.helpers({
   sets: function() {
     return Sets.find({});
   },
-  setShow: function() {
-    return Session.get('setShow')
+  set: function() {
+    return Session.get('set')
   }
 });
 

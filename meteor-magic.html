@@ -6,12 +6,13 @@
 <div class="sets">
   {{> setForm}}
   {{#each sets}}
-    {{> set}}
+    {{> setIndex}}
   {{/each}}
 </div>
 <div class="cards">
-  <!-- USE DYNAMIC TEMPLATES WITH DATA TO ACCESS CARDS INDEX -->
-  {{> Template.dynamic template=setShow}}
+  {{#if setId}}
+    {{> set}}
+  {{/if }}
 </div>
 </body>
 

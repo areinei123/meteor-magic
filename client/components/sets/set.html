@@ -1,5 +1,18 @@
 <template name="set">
 <div class="container">
-  <p><a href="/" class="setShow">{{setName}}</a> | Size: {{setSize}} cards</p>
+  {{#with setData}}
+    <p>Some Stuff</p>
+    <p>{{setName}}</p>
+  {{/with}}
+</div>
+
+<div class="cards container">
+  <span class="glyphicon glyphicon-pencil card-new" aria-hidden="true"></span>
+  <!-- Cards Form -->
+  {{#if newCard }}
+    {{> cardNew}}
+  {{/if }}
+  <!-- Cards index -->
+  <!-- must only show cards from this set -->
 </div>
 </template>

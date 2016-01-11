@@ -13,14 +13,9 @@ Template.setForm.events({
   }
 });
 
-Template.set.events({
-  "click .setShow": function() {
-    // setId = this._id;
-    // set = Sets.find({setId}).fetch();
-    // setSpecifics = set.map(function(set) {return set.setname;});
-    // console.log(set);
-    // console.log(setSpecifics);
-    return Session.set('setShow');
+Template.setIndex.events({
+  "click .set": function() {
+    return Session.set('setId', this._id);
   }
 });
 
@@ -29,3 +24,23 @@ Template.set.helpers({
     return Sets.find({});
   }
 });
+
+Template.set.helpers({
+  setData: function() {
+    return Sets.findOne(Session.get('setId'));
+  },
+  newCard:function(){
+    return Template.instance().newCard.get();
+  }
+})
+
+Template.set.events({
+  'click .card-new': function(event,template) {
+    var newCard=template.newCard.get();
+    template.newCard.set(!newCard);
+  }
+});
+
+Template.set.created=function(){
+  this.newCard=new ReactiveVar(false);
+};
