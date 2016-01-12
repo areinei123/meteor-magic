@@ -36,7 +36,8 @@ Template.set.helpers({
 
 Template.set.events({
   'click .card-new': function(event,template) {
-    var newCard=template.newCard.get();
+    event.preventDefault;
+    var newCard = template.newCard.get();
     template.newCard.set(!newCard);
   }
 });
