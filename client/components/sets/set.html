@@ -1,18 +1,20 @@
 <template name="set">
-<div class="container">
-  {{#with setData}}
-    <p>Some Stuff</p>
-    <p>{{setName}}</p>
-  {{/with}}
-</div>
-
-<div class="cards container">
-  <a class="card-new" aria-hidden="true">Click </a>to add a card
-  <!-- Cards Form -->
-  {{#if newCard }}
-    {{> cardNew}}
+{{#with setData}}
+  <div class="container">
+      <p>Some Stuff</p>
+      <p>{{setName}}</p>
+  </div>
+  {{#if setData}}
+    <div class="cards container">
+      <a class="card-new" aria-hidden="true">Click </a>to add a card
+      <!-- Cards Form -->
+      {{#if newCard }}
+        {{> cardNew}}
+      {{/if }}
+      <!-- Cards index -->
+      {{> cards}}
+      <!-- must only show cards from this set -->
+    </div>
   {{/if }}
-  <!-- Cards index -->
-  <!-- must only show cards from this set -->
-</div>
+{{/with}}
 </template>

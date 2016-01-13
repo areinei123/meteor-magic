@@ -1,6 +1,6 @@
 Template.setForm.events({
   "submit .new-set": function (event) {
-    event.preventDefault;
+    event.preventDefault();
     var setName = event.target.setName.value;
     var setSize = event.target.setSize.value;
     Sets.insert ({
@@ -9,7 +9,7 @@ Template.setForm.events({
       createdAt: new Date()
     });
     event.target.setName.value = "";
-    event.target.setName.value = "";
+    event.target.setSize.value = "";
   }
 });
 
@@ -32,7 +32,7 @@ Template.set.helpers({
   newCard:function(){
     return Template.instance().newCard.get();
   }
-})
+});
 
 Template.set.events({
   'click .card-new': function(event,template) {
