@@ -1,67 +1,75 @@
 <template name="cardNew">
 <div class="container">
-  <div class="set-form">
-    <form class="form-horizontal new-card">
-      <div class="form-group">
-        <label for="cardName" class="col-sm-1 control-label">Name</label>
-        <div class="col-sm-5">
-          <input type="text" name="cardName" class="form-control" id="cardName" placeholder="Card Name">
-        </div>
+  <div class="row">
+    <div class=".col-md-6">
+      <div class="set-form">
+        <form class="form-horizontal new-card">
+          <div class="form-group">
+            <label for="cardName" class="col-sm-1 control-label">Name</label>
+            <div class="col-sm-5">
+              <input type="text" name="cardName" class="form-control" id="cardName" placeholder="Card Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="manaCost" class="col-sm-1 control-label">Mana Cost</label>
+            <div class="col-sm-5">
+              <input type="text" name="manaCost" class="form-control" id="manaCost" placeholder="Colors are W G R B U">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mainType" class="col-sm-1 control-label">Main Type</label>
+            <div class="col-sm-5">
+              <input type="text" name="mainType" class="form-control" id="mainType" placeholder="Card Type">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subType" class="col-sm-1 control-label">Sub Type</label>
+            <div class="col-sm-5">
+              <input type="text" name="subType" class="form-control" id="subType" placeholder="Optional">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rulesText" class="col-sm-1 control-label">Rules Text</label>
+            <div class="col-sm-5">
+              <input type="textarea" cols="30" rows="5" name="rulesText" class="form-control" id="rulesText">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="flavorText" class="col-sm-1 control-label">Flavor Text</label>
+            <div class="col-sm-5">
+              <input type="text" name="flavorText" class="form-control" id="flavorText">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="power" class="col-sm-1 control-label">Power</label>
+            <div class="col-sm-5">
+              <input type="text" name="power" class="form-control" id="power" placeholder="Creatures only">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="toughness" class="col-sm-1 control-label">Toughness</label>
+            <div class="col-sm-5">
+              <input type="text" name="toughness" class="form-control" id="toughness" placeholder="Creatures only">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="imageUpload" class="col-sm-1 control-label">Image</label>
+            <div class="col-sm-5">
+              <input type="text" name="imageUrl" class="form-control" id="imageUrl">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="manaCost" class="col-sm-1 control-label">Mana Cost</label>
-        <div class="col-sm-5">
-          <input type="text" name="manaCost" class="form-control" id="manaCost" placeholder="Colors are W G R B U">
-        </div>
+    </div>
+    <div class=".col-md-6">
+      <div class="sample-card">
       </div>
-      <div class="form-group">
-        <label for="mainType" class="col-sm-1 control-label">Main Type</label>
-        <div class="col-sm-5">
-          <input type="text" name="mainType" class="form-control" id="mainType" placeholder="Card Type">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="subType" class="col-sm-1 control-label">Sub Type</label>
-        <div class="col-sm-5">
-          <input type="text" name="subType" class="form-control" id="subType" placeholder="Optional">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="rulesText" class="col-sm-1 control-label">Rules Text</label>
-        <div class="col-sm-5">
-          <input type="textarea" cols="30" rows="5" name="rulesText" class="form-control" id="rulesText">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="flavorText" class="col-sm-1 control-label">Flavor Text</label>
-        <div class="col-sm-5">
-          <input type="text" name="flavorText" class="form-control" id="flavorText">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="power" class="col-sm-1 control-label">Power</label>
-        <div class="col-sm-5">
-          <input type="text" name="power" class="form-control" id="power" placeholder="Creatures only">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="toughness" class="col-sm-1 control-label">Toughness</label>
-        <div class="col-sm-5">
-          <input type="text" name="toughness" class="form-control" id="toughness" placeholder="Creatures only">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="imageUpload" class="col-sm-1 control-label">Image</label>
-        <div class="col-sm-5">
-          <input type="file" name="imageUpload" class="form-control" id="imageUpload">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Submit</button>
-        </div>
-      </div>
-    </form>
+    </div>
   </div>
 </div>
 </template>

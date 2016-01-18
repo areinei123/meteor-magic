@@ -1,8 +1,16 @@
 Template.cards.helpers ({
   cards: function(){
-    return Cards.find({});
+    // var setId = Sets.findOne(Session.get('setId'));
+    // console.log(setId);
+    return Cards.find({})//({setId: setId._id});
   }
-})
+});
+
+// Template.card.helpers ({
+//   images: function () {
+//     return Images.find({'metadata.owner': cardId}); // Where Images is an FS.Collection instance
+//   }
+// });
 
 Template.cardNew.helpers({
   setData: function() {
@@ -23,9 +31,8 @@ Template.cardNew.events({
     var toughness = event.target.toughness.value;
     // var file = $('#imageUpload').get(0).files[0];
     // var fileObj = Images.insert(file);
+    var imageUrl = event.target.imageUrl.value;
     var setId = Sets.findOne(Session.get('setId'));
-    console.log(name);
-    console.log(setId);
     Cards.insert({
       name: name,
       manaCost: manaCost,
@@ -35,8 +42,17 @@ Template.cardNew.events({
       flavorText: flavorText,
       power: power,
       toughness: toughness,
-      // fileObj: fileObj,
+      imageUrl: imageUrl,
       setId: setId
-    })
+    });
+    event.target.cardName.value = "";
+    event.target.manaCost.value = "";
+    event.target.mainType.value = "";
+    event.target.subType.value = "";
+    event.target.rulesText.value = "";
+    event.target.flavorText.value = "";
+    event.target.power.value = "";
+    event.target.toughness.value = "";
+    event.target.imageUrl.value = "";
   }
 });
