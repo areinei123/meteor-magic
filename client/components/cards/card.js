@@ -21,48 +21,39 @@ Template.cardNew.helpers({
 Template.cardNew.events({
   "keyup #cardName": function(event) {
     var line = String($(event.currentTarget).val());
-    console.log(line);
     $(".card-name").html(line);
   },
   "keyup #manaCost": function(event) {
     var line = String($(event.currentTarget).val());
-    console.log(line);
     $(".card-mana-cost").html(line);
   },
   "keyup #mainType": function(event) {
     var line = String($(event.currentTarget).val());
-    console.log(line);
     $(".card-main-type").html(line);
   },
   "keyup #subType": function(event) {
     var line = String($(event.currentTarget).val());
-    console.log(line);
     $(".card-sub-type").html(line);
   },
   "keyup #rulesText": function(event) {
     var line = String($(event.currentTarget).val());
-    console.log(line);
     $(".card-rules-text").html(line);
   },
   "keyup #flavorText": function(event) {
     var line = String($(event.currentTarget).val());
-    console.log(line);
     $(".card-flavor-text").html(line);
   },
   "keyup #power": function(event) {
     var line = String($(event.currentTarget).val());
-    console.log(line);
     $(".card-power").html(line);
   },
   "keyup #toughness": function(event) {
     var line = String($(event.currentTarget).val());
-    console.log(line);
     $(".card-toughness").html(line);
   },
   "keyup #imageUrl": function(event) {
     var line = String($(event.currentTarget).val());
-    console.log(line);
-    $(".card-image").html(line);
+    $(".card-image").css('background-image','url('+line+')');
   },
   "submit .new-card": function(event) {
     event.preventDefault();
