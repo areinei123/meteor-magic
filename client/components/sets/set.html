@@ -1,8 +1,9 @@
 <template name="set">
 {{#with setData}}
   <div class="container">
-      <p>Some Stuff</p>
       <p>{{setName}}</p>
+      <p>Total Cards: {{numberOfCards}} of {{setSize}}</p>
+      <p><a class="print-layout">Print Layout</a></p>
   </div>
   {{#if setData}}
     <div class="cards container">

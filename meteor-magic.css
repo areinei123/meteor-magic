@@ -16,14 +16,14 @@
   height: 77px;
 }
 
-.card-name{
+#card-name{
   display: inline-block;
   font-family: "Lucida Console";
   font-size: 2.6rem;
   white-space: pre;
 }
 
-.card-mana-cost{
+#card-mana-cost{
   display: inline-block;
   font-family: MTG;
   font-size: 2.6rem;
@@ -48,13 +48,13 @@
   padding-right: 25px
 }
 
-.card-main-type {
+#card-main-type {
   display: inline-block;
   font-family: "Lucida Console";
   font-size: 2.2rem;
 }
 
-.card-sub-type {
+#card-sub-type {
   display: inline-block;
   font-family: "Lucida Console";
   font-size: 2.2rem;
@@ -69,12 +69,12 @@
   height: 211px;
 }
 
-.card-rules-text{
+#card-rules-text{
   font-family: "Lucida Console";
   font-size: 1.5rem;
 }
 
-.card-flavor-text{
+#card-flavor-text{
   font-family: "Lucida Console";
   font-size: 1.5rem;
   font-style: italic;  
@@ -90,7 +90,7 @@
   padding-right: 18px;
 }
 
-.card-power{
+#card-power{
   display: inline-block;
   font-family: "Lucida Console";
   font-size: 2.9rem;
@@ -98,7 +98,7 @@
   float: right;
 }
 
-.card-slash{
+#card-slash{
   display: inline-block;
   font-family: "Lucida Console";
   font-size: 2.9rem;
@@ -106,7 +106,7 @@
   float: right;
 }
 
-.card-toughness{
+#card-toughness{
   display: inline-block;
   font-family: "Lucida Console";
   font-size: 2.9rem;
@@ -116,4 +116,10 @@
 
 img{
   width: 300px;
+}
+
+.card-mana-cost {
+  display: inline-block;
+  font-family: MTG;
+  float: right;
 }

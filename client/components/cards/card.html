@@ -1,6 +1,19 @@
 <template name="card">
-  <p>{{name}} - <div class="card-mana-cost">{{manaCost}}</div></p>
+  <p>{{name}} - 
+  <div class="card-mana-cost">{{manaCost}}</div></p>
+  <p>{{mainType}} - {{subType}}</p>
   <p>{{rulesText}}</p>
+  <p>
+    <a href="" class="btn edit" id="{{_id}}">
+      Edit
+    </a>
+    <a href="" class="btn delete" id="{{_id}}">
+      Delete
+    </a>
+  </p>
+  {{#if editCard}}
+    {{> cardEdit}}
+  {{/if}}
   <!-- <div class="index-image"><p>
   <img src="{{imageUrl}}">
   </p></div> -->
