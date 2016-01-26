@@ -1,0 +1,85 @@
+.print-card{
+  background-size: 100%;
+  background-image: url('/images/card-template.png');
+  background-repeat: no-repeat;
+  height: 469px;
+  width: 339px;
+}
+
+#print-top-of-card{
+  height: 56px;
+  width: 100%;
+  display: inline-block;
+  padding-top: 24px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 7px;
+}
+
+#print-image-space{
+  width: 100%;
+  height: 205px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+#print-type-space{
+  width: 100%;
+  height: 33px;
+}
+
+#print-text-space{
+  width: 100%;
+  height: 130px;
+}
+
+#print-pow-tough-space{
+  width: 100%;
+  height: 31px;
+}
+
+#print-name{
+  display: inline-block;
+  font-family: "Lucida Console";
+  font-size: 1.9rem;
+}
+
+#print-mana-cost{
+  display: inline-block;
+  font-family: MTG;
+  font-size: 1.9rem;
+  float: right;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#print-main-type{
+  font-family: "Lucida Console";
+}
+
+#print-sub-type{
+  font-family: "Lucida Console";
+}
+
+#print-rules-text{
+  font-family: "Lucida Console";
+
+}
+
+#print-flavor-text{
+  font-family: "Lucida Console";
+
+}
+
+#print-toughness{
+  font-family: "Lucida Console";
+
+}
+
+#print-power{
+  font-family: "Lucida Console";
+
+}

@@ -29,6 +29,9 @@ Template.set.helpers({
   newCard:function(){
     return Template.instance().newCard.get();
   },
+  printLayout:function(){
+    return Template.instance().printLayout.get();
+  },
   numberOfCards: function(){
     var setId = Session.get('setId');
     return Cards.find({setId: setId}).count();
@@ -41,12 +44,14 @@ Template.set.events({
     var newCard = template.newCard.get();
     template.newCard.set(!newCard);
   },
-  'click .print-layout': function(event){
+  'click .print-layout': function(event, template){
     event.preventDefault();
-    
+    var printLayout = template.printLayout.get();
+    template.printLayout.set(!printLayout);
   }
 });
 
 Template.set.created = function(){
   this.newCard = new ReactiveVar(false);
+  this.printLayout = new ReactiveVar(false);
 };

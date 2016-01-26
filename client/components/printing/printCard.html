@@ -1,0 +1,23 @@
+<template name="printCard">
+<div class="col-sm-6 inside-full-height print-card">
+  <div id="print-top-of-card">
+    <div id="print-name">{{name}}</div>
+    <div id="print-mana-cost">{{manaCost}}</div>
+  </div>
+  <div id="print-image-space">
+    <img src="{{imageUrl}}">
+  </div>
+  <div id="print-type-space">
+    <div id="print-main-type">{{mainType}}</div>
+    <div id="print-sub-type">{{subType}}</div>
+  </div>
+  <div id="print-text-space">
+    <div id="print-rules-text">{{rulesText}}</div>
+    <div id="print-flavor-text">{{flavorText}}</div>
+  </div>
+  <div id="print-pow-tough-space">
+    <div id="print-toughness">{{toughness}}</div>
+    <div id="print-power">{{power}}</div>
+  </div>
+</div>
+</template>
