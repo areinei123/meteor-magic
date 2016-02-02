@@ -1,13 +1,11 @@
+Meteor.subscribe("sets");
+
 Template.setForm.events({
   "submit .new-set": function (event) {
     event.preventDefault();
     var setName = event.target.setName.value;
     var setSize = event.target.setSize.value;
-    Sets.insert ({
-      setName: setName,
-      setSize: setSize,
-      createdAt: new Date()
-    });
+    Meteor.call("addSet", setName, setSize);
     event.target.setName.value = "";
     event.target.setSize.value = "";
   }

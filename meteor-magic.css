@@ -1,5 +1,9 @@
 @font-face { font-family: MTG; src: url('/fonts/MagicCardsNormal.ttf'); }
 
+.mana-font{
+  font-family: MTG;
+}
+
 .sample-card{
   background-image: url('/images/card-template.png');
   background-repeat: no-repeat;
@@ -122,4 +126,8 @@ img{
   display: inline-block;
   font-family: MTG;
   float: right;
+}
+
+.new-card-container {
+  padding-top: 3rem;
 }

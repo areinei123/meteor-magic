@@ -1,5 +1,5 @@
 <template name="cardNew">
-<div class="container">
+<div class="container new-card-container">
   <div class="row">
     <div class="col-sm-6 inside-full-height">
       <div class="set-form">
@@ -13,7 +13,16 @@
           <div class="form-group">
             <label for="manaCost" class="col-sm-1 control-label">Mana Cost</label>
             <div class="col-sm-11">
-              <input type="text" name="manaCost" class="form-control" id="manaCost" placeholder="Colors are W G R B U">
+              <input type="text" name="manaCost" class="form-control" id="manaCost">
+              <p>Use the following symbols for mana:</p>
+              <p>
+                "[" : "<span class="mana-font">[</span>" ... 
+                "]" : "<span class="mana-font">]</span>" ...  
+                "{" : "<span class="mana-font">{</span>" ...  
+                "}" : "<span class="mana-font">}</span>" ...  
+                "|" : "<span class="mana-font">|</span>"
+
+              </p>
             </div>
           </div>
           <div class="form-group">

@@ -9,15 +9,19 @@
   </div>
   <div id="print-type-space">
     <div id="print-main-type">{{mainType}}</div>
-    <div id="print-sub-type">{{subType}}</div>
+    {{#if itsACreature}}
+      <div id="print-sub-type"> - {{subType}}</div>
+    {{/if }}
   </div>
   <div id="print-text-space">
     <div id="print-rules-text">{{rulesText}}</div>
     <div id="print-flavor-text">{{flavorText}}</div>
   </div>
   <div id="print-pow-tough-space">
-    <div id="print-toughness">{{toughness}}</div>
-    <div id="print-power">{{power}}</div>
+    {{#if itsACreature}}
+      <div id="print-toughness">{{toughness}}</div>
+      <div id="print-power">{{power}}/</div>
+    {{/if}}
   </div>
 </div>
 </template>

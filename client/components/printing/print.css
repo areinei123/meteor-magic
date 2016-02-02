@@ -4,8 +4,10 @@
   background-repeat: no-repeat;
   height: 469px;
   width: 339px;
+  -webkit-print-color-adjust: exact;
 }
 
+/* container spacing */
 #print-top-of-card{
   height: 56px;
   width: 100%;
@@ -14,6 +16,7 @@
   padding-left: 13px;
   padding-right: 13px;
   padding-bottom: 7px;
+  font-weight: bold;
 }
 
 #print-image-space{
@@ -26,17 +29,31 @@
 #print-type-space{
   width: 100%;
   height: 33px;
+  display: inline-block;
+  padding-top: 6px;
+  padding-left: 17px;
+  font-weight: bold;
 }
 
 #print-text-space{
   width: 100%;
   height: 130px;
+  padding-top: 4px;
+  padding-right: 19px;
+  padding-left: 19px;
 }
 
 #print-pow-tough-space{
   width: 100%;
   height: 31px;
+  display: inline-block;
+  padding-top: 2px;
+  padding-right: 14px;
+  font-size: 22px;
+  font-weight: bold;
 }
+
+/* Content Spacing */
 
 #print-name{
   display: inline-block;
@@ -57,10 +74,12 @@ img {
 }
 
 #print-main-type{
+  display: inline-block;
   font-family: "Lucida Console";
 }
 
 #print-sub-type{
+  display: inline-block;
   font-family: "Lucida Console";
 }
 
@@ -71,15 +90,19 @@ img {
 
 #print-flavor-text{
   font-family: "Lucida Console";
+  font-style: italic;
 
 }
 
 #print-toughness{
   font-family: "Lucida Console";
+  display: inline-block;
+  float: right;
 
 }
 
 #print-power{
   font-family: "Lucida Console";
-
+  display: inline-block;
+  float: right;
 }

@@ -4,3 +4,12 @@ Template.cardPrintLayout.helpers({
     return Cards.find({setId: setId});
   }
 });
+
+Template.printCard.helpers({
+  itsACreature: function(){
+    var type = this.mainType;
+    if (type.indexOf("Creature") > -1) {
+      return true
+    };
+  }
+});

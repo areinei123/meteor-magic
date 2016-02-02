@@ -1,15 +1,11 @@
+Meteor.subscribe("cards");
+
 Template.cards.helpers ({
   cards: function(){
     var setId = Session.get('setId');
     return Cards.find({setId: setId});
   }
 });
-
-// Template.card.helpers ({
-//   images: function () {
-//     return Images.find({'metadata.owner': cardId}); // Where Images is an FS.Collection instance
-//   }
-// });
 
 Template.cardNew.helpers({
   setData: function() {
@@ -67,22 +63,9 @@ Template.cardNew.events({
     var flavorText = event.target.flavorText.value;
     var power = event.target.power.value;
     var toughness = event.target.toughness.value;
-    // var file = $('#imageUpload').get(0).files[0];
-    // var fileObj = Images.insert(file);
     var imageUrl = event.target.imageUrl.value;
     var setId = Session.get('setId');
-    Cards.insert({
-      name: name,
-      manaCost: manaCost,
-      mainType: mainType,
-      subType: subType,
-      rulesText: rulesText,
-      flavorText: flavorText,
-      power: power,
-      toughness: toughness,
-      imageUrl: imageUrl,
-      setId: setId
-    });
+    Meteor.call("addCard", name, manaCost, mainType, subType, rulesText, flavorText, power, toughness, imageUrl, setId);
     event.target.cardName.value = "";
     event.target.manaCost.value = "";
     event.target.mainType.value = "";
@@ -104,7 +87,8 @@ Template.card.helpers({
 Template.card.events({
   "click .delete": function(){
     event.preventDefault();
-    Cards.remove(this._id);
+    var id = this._id;
+    Meteor.call("deleteCard", id);
   },
   'click .edit': function(event, template) {
     event.preventDefault();
@@ -165,18 +149,6 @@ Template.cardEdit.events({
     var power = event.target.power.value;
     var toughness = event.target.toughness.value;
     var imageUrl = event.target.imageUrl.value;
-
-    Cards.update(this._id, { $set: {
-      name: name,
-      manaCost: manaCost,
-      mainType: mainType,
-      subType: subType,
-      rulesText: rulesText,
-      flavorText: flavorText,
-      power: power,
-      toughness: toughness,
-      imageUrl: imageUrl,
-    }
-    });
+    Meteor.call("editCard", name, manaCost, mainType, subType, rulesText, flavorText, power, toughness, imageUrl);
   }
 });
