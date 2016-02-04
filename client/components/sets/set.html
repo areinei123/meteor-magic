@@ -11,13 +11,10 @@
     {{#if setData}}
       <div class="cards container">
         <a class="card-new" aria-hidden="true">Click </a>to add a card
-        <!-- Cards Form -->
         {{#if newCard }}
           {{> cardNew}}
         {{/if }}
-        <!-- Cards index -->
         {{> cards}}
-        <!-- must only show cards from this set -->
       </div>
     {{/if }}
   {{/if}}

@@ -1,3 +1,6 @@
+Router.route('/',{
+  template: 'home'
+});
 Router.route('/set/:_id', {
   template: 'set',
   data: function(){
@@ -6,5 +9,3 @@ Router.route('/set/:_id', {
     return Sets.findOne({ _id: set });
   }
 });
-
-Router.route('/')

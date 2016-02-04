@@ -81,6 +81,12 @@ Template.cardNew.events({
 Template.card.helpers({
   editCard: function(){
     return Template.instance().editCard.get();
+  },
+  itsACreature: function(){
+    var type = this.mainType;
+    if (type.indexOf("Creature") > -1) {
+      return true
+    };
   }
 })
 

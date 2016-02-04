@@ -1,20 +1,13 @@
 <template name="card">
-  <p>{{name}} - 
+  <p>{{name}}
   <div class="card-mana-cost">{{manaCost}}</div></p>
-  <p>{{mainType}} - {{subType}}</p>
+  <p>{{mainType}} {{#if itsACreature}} - {{subType}} {{power}}/{{toughness}} {{/if }}</p>
   <p>{{rulesText}}</p>
   <p>
-    <a href="" class="btn edit" id="{{_id}}">
-      Edit
-    </a>
-    <a href="" class="btn delete" id="{{_id}}">
-      Delete
-    </a>
+    <button type="button" class="btn btn-default edit" id="{{_id}}">Edit</button>
+    <button type="button" class="btn btn-default delete" id="{{_id}}">Delete</button>    
   </p>
   {{#if editCard}}
     {{> cardEdit}}
   {{/if}}
-  <!-- <div class="index-image"><p>
-  <img src="{{imageUrl}}">
-  </p></div> -->
 </template>

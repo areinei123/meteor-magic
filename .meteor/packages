@@ -19,6 +19,3 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 twbs:bootstrap
 iron:router
 reactive-var
-cfs:standard-packages
-cfs:s3
-cfs:filesystem

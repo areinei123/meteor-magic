@@ -1,0 +1,1 @@
+(function(){var cacheKey,systemFetch,_ref;cacheKey=null!=(_ref=document.querySelector("meta[cache-key]"))?_ref.getAttribute("cache-key"):void 0,systemFetch=System.fetch,System.fetch=function(load){var extension,tokens;return tokens=load.address.split("."),extension=tokens.pop(),load.address=""+tokens.join(".")+"-"+cacheKey+"."+extension,systemFetch.call(this,load)}}).call(this);
