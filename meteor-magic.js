@@ -1,6 +1,4 @@
-Router.route('/',{
-  template: 'home'
-});
+Router.route('/');
 Router.route('/set/:_id', {
   template: 'set',
   data: function(){

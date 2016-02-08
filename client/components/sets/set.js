@@ -11,6 +11,13 @@ Template.setForm.events({
   }
 });
 
+Template.setIndex.helpers({
+  numberOfCards: function(){
+    var setId = this._id;
+    return Cards.find({setId: setId}).count();
+  }
+});
+
 Template.setIndex.events({
   "click .set": function() {
     return Session.set('setId', this._id);
@@ -31,7 +38,7 @@ Template.set.helpers({
     return Template.instance().printLayout.get();
   },
   numberOfCards: function(){
-    var setId = Session.get('setId');
+    var setId = this._id;
     return Cards.find({setId: setId}).count();
   }
 });
